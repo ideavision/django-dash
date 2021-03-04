@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--if succesfull login-->
+    {%if user.is_authenticated %}
+    <!-- connect plotly dash with django by ID metioned in dash_app_code.py-->
+    {%plotly_app_name='dash_integration_id' ratio=0.45%}
+
+    <!--if not successful login-->
+    {%else%}
+    <h3>You are not logged in</h3>
+    <h3>please login to view plots</h3>
+    <br/>
+    <br/>
+    <button onclick="window.location.href='{%url 'login'%}';">login</button>
+    {%endif%}
+</body>
+</html>

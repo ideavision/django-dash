@@ -1,0 +1,9 @@
+django==2.1.5
+django_plotly_dash==1.1.4
+channels
+bootstrap4
+dpd_static_support==0.0.5
+dash
+dash_daq
+dash_bootstrap_components
+whitenoise==5.0.1
